@@ -97,26 +97,26 @@ function typeEffect() {
   setTimeout(type, newTextDelay);
 };
 
-// Smooth Scroll to Pages Effect
-function smoothScroll() {
-  //create an event listener on click on anchors
-  $('a').on('click', function (event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== '') {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-      // cache value
-      const MoveTo = this.hash;
-      // Using smooth page scroll 
-      $('html, body').animate({
-        'scrollTop': $(MoveTo).offset().top
-      }, 1000, function () {
-        // default click behavior
-        window.location.hash = MoveTo;
-      });
-    }
-  });
-};
+// // Smooth Scroll to Pages Effect
+// function smoothScroll() {
+//   //create an event listener on click on anchors
+//   $('a').on('click', function (event) {
+//     // Make sure this.hash has a value before overriding default behavior
+//     if (this.hash !== '') {
+//       // Prevent default anchor click behavior
+//       event.preventDefault();
+//       // cache value
+//       const MoveTo = this.hash;
+//       // Using smooth page scroll 
+//       $('html, body').animate({
+//         'scrollTop': $(MoveTo).offset().top
+//       }, 1000, function () {
+//         // default click behavior
+//         window.location.hash = MoveTo;
+//       });
+//     }
+//   });
+// };
 
 // Pop-up for each Project Effect
 function modalPopUp() {
@@ -189,7 +189,7 @@ function activeScroll() {
 };
 
 flowText();
-smoothScroll();
+// smoothScroll();
 typeEffect();
 modalPopUp();
 activeLink();
