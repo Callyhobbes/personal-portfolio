@@ -1,0 +1,59 @@
+nav {
+  position: fixed;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  margin-right: 25px;
+}
+
+.navbar {
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
+  li {
+    display: flex;
+    justify-content: flex-end;
+  }
+  a {
+    padding: 15px 0;
+    display: flex;
+    position: relative;
+    p {
+      position: relative;
+      text-align: right;
+      text-transform: uppercase;
+      transform: translateY(-50%);
+      padding-right: 10px;
+      font-size: 1.4rem;
+      line-height: 1;
+      opacity: 0;
+      transition: .5s;
+    }
+    &:hover span,
+    &:focus span {
+      width: 35px;
+      background-color: $red;
+    }
+    &:hover p,
+    &:focus p {
+      opacity: 1;
+    }
+  }
+  span {
+    display: block;
+    width: 20px;
+    height: 3px;
+    background-color: $black;
+    transition: .5s;
+  }
+  .light {
+    background-color: $red;
+    width: 30px;
+  }
+}
+
+
+
+

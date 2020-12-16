@@ -1,0 +1,219 @@
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: sans-serif;
+  h2 {
+    width: 100%;
+    color: $black;
+    text-align: center;
+    margin-bottom: 10px;
+    left: 20px;
+    transition: .5s;
+  }
+  .change {
+    color: $red;
+    opacity: 0;
+  }
+  h2::before {
+    content: '';
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0px;
+    height: 3px;
+    background-color: $red;
+    transition: .5s;
+  }
+}
+
+form {
+  width: 40%;
+  padding: 20px;
+  &:hover .change {
+    opacity: 1;
+  }
+  &:hover h2::before {
+    width: 40px;
+  }
+  &:hover h2 {
+    left: 0;
+  }
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(autofit, minmax(300px, 1fr));
+}
+
+.row {
+  position: relative;
+  width: 100%;
+  padding: 0 10px;
+  margin: 30px 0 10px;
+  transition: .5s;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  color: $black;
+}
+
+input,
+textarea {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding: 0 10px;
+  z-index: 1;
+  color: $white;
+}
+
+.text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 40px;
+  font-size: 18px;
+  padding: 0 10px;
+  display: block;
+  transition: .5s;
+  pointer-events: none;
+}
+
+input:focus + .text,
+input:valid + .text,
+textarea:focus + .text,
+textarea:valid + .text {
+  top: -35px;
+  left: -10px;
+  color: $red;
+}
+
+.line {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: $red;
+  transition: .5s;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+input:focus ~ .line,
+input:valid ~ .line,
+textarea:focus ~ .line,
+textarea:valid ~ .line {
+  height: 100%;
+  background-color: $black;
+}
+
+.textarea {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  padding: 10px 0;
+}
+
+textarea {
+  height: 100%;
+  resize: none;
+}
+
+.button-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+}
+
+button {
+  @include fontStyling(2rem);
+  padding: 20px 60px;
+  border-radius: 59px;
+  border: none;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $black;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Hind Siliguri', sans-serif;
+  cursor: pointer;
+  &:hover > .paint:nth-child(1) {
+    transform: translate(-35px, -20px) rotate(-20deg) scale(1,1);
+  }
+  &:hover > .paint:nth-child(2) {
+    transform: translate(21px, -20px) rotate(20deg) scale(1,1);
+  }
+  &:hover > .paint:nth-child(3) {
+    transform: translate(81px, -20px) rotate(-20deg) scale(1,1);
+  }
+  &:hover {
+    color: $white;
+  }
+}
+
+.paint {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $red;
+  width: 85px;
+  height: 120px;
+  transition: .5s;
+}
+
+.paint:nth-child(1) {
+  transform-origin: 50% 0;
+  transform: translate(-35px, -20px) rotate(-20deg) scale(1,0);
+}
+
+.paint:nth-child(2) {
+  transform-origin: 50% 100%;
+  transform: translate(21px, -20px) rotate(20deg) scale(1,0);
+  transition-delay: .25s;
+}
+
+.paint:nth-child(3) {
+  transform-origin: 50% 0%;
+  transform: translate(81px, -20px) rotate(-20deg) scale(1,0);
+  transition-delay: .5s;
+}
+
+.label {
+  position: relative;
+  transition: .5s;
+}
+
+.media {
+  position: absolute;
+  bottom: 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  a {
+    font-size: 4rem;
+    padding: 0 30px;
+    transition: .5s;
+    &:hover {
+      color: $red;
+    }
+  }
+  p {
+    padding-bottom: 20px;
+    width: 40%;
+  }
+}

@@ -1,0 +1,64 @@
+.skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.languages {
+  h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    left: 10px;
+    transition: .5s;
+  }
+  h2::before {
+    content: '';
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0px;
+    height: 3px;
+    background-color: $red;
+    transition: .5s;
+  }
+  &:hover h2::before {
+    width: 40px;
+  }
+  &:hover h2 {
+    left: 0;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 80%;
+  }
+  li {
+    display: block;
+    width: calc(100% / 4);
+    text-align: center;
+    padding: 20px;
+    font-size: 6rem;
+  }
+  p {
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding-top: 10px;
+  }
+  .change-s {
+    color: $black;
+  }
+  .change {
+    color: $red;
+    opacity: 0;
+  }
+  &:hover .change-s {
+    color: $red;
+  }
+  &:hover .change {
+    opacity: 1;
+  }
+}
+
+

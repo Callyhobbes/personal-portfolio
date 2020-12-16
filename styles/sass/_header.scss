@@ -1,0 +1,80 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.5) 70%, rgba(255,255,255,1) 100%), url(../assets/snow.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+h1 span {
+  transition: .5s;
+}
+
+h1 span.fade {
+  color: $red;
+}
+
+.fade {
+  color: $red
+}
+
+.fadeBack {
+  color: $black;
+}
+
+.typing {
+  display: flex;
+}
+
+.type-text {
+  position: relative;
+  padding-left: 10px;
+}
+
+.type-text::after {
+  content: '';
+  position: absolute;
+  right: -5px;
+  width: 1px;
+  height: 30px;
+  border-right: 3px solid $black;
+  animation: blink 1s infinite ease;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+h2 span {
+  color: $red;
+}
+
+.intro-content {
+  padding: 0 10px;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  a {
+    font-size: 2rem;
+    padding: 10px;
+    transition: .5s;
+    &:hover {
+      color: $red;
+    }
+  }
+  p {
+    padding-bottom: 20px;
+    width: 40%;
+  }
+}
+

@@ -1,0 +1,214 @@
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.examples {
+  &:hover .change-s {
+    opacity: 0;
+  }
+  &:hover .change {
+    opacity: 1;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    left: 65px;
+    transition: .5s;
+  }
+  h2::before {
+    content: '';
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0px;
+    height: 3px;
+    background-color: $red;
+    transition: .5s;
+  }
+  &:hover h2::before {
+    width: 40px;
+  }
+  &:hover h2 {
+    left: 0;
+  }
+}
+
+.portfolio {
+  width: 80%;
+  margin: 0 auto;
+  ul {
+    width: 80%;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(2, 1fr);
+    margin: 0 auto;
+  }
+  li {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+  }
+  img {
+    border: 5px solid $black;
+    border-radius: 20px;
+    transition: animation 1s linear 0s, filter .5s linear 0s, border 1s linear 0s;
+    filter: grayscale(100%);
+    &:hover,
+    &:focus {
+      animation: bubble1 1s linear 0s, bubble2 8s linear 1s infinite;
+      filter: grayscale(0%);
+      border: 5px solid $red;
+    }
+  }
+}
+
+@keyframes bubble1 {
+  0% {
+    border-radius: 20px;
+  }
+  100%{
+    border-radius: 56% 44% 69% 31% / 58% 35% 65% 42%;
+  }
+}
+@keyframes bubble2 {
+  0% {
+    border-radius: 56% 44% 69% 31% / 58% 35% 65% 42%;
+  }
+  33% {
+    border-radius: 33% 67% 37% 63% / 54% 58% 42% 45%;
+  }
+  66% {
+    border-radius: 74% 67% 57% 74% / 89% 92% 42% 45%;
+  }
+  100% {
+    border-radius: 56% 44% 69% 31% / 58% 35% 65% 42%;
+  }
+}
+
+// Pop-up modal section
+.popup {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity .5s;
+  cursor: default;
+}
+
+.background-active {
+  visibility: visible;
+  opacity: 1;
+  z-index: 5;
+}
+
+.pop-content {
+  background-color: $white;
+  width: 30%;
+  height: 30%;
+  min-height: 300px;
+  min-width: 300px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  border-radius: 20px;
+  span {
+    color: $red;
+    transition: none;
+  }
+}
+
+.code {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 8px;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: 7px;
+    width: 20px;
+    height: 2px;
+    background-color: $black;
+    transform: rotate(45deg);
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: 7px;
+    width: 20px;
+    height: 2px;
+    background-color: $black;
+    transform: rotate(-45deg);
+  }
+}
+
+.reference {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  a {
+    margin: 0 20px;
+    padding: 10px 30px;
+    font-weight: 700;
+    border: 3px solid $red;
+    border-radius: 25px;
+    text-transform: uppercase;
+    &:hover {
+      background-color: $red;
+      color: $white;
+    }
+  }
+}
+
+.bg-1, .bg-2, .bg-3, .bg-4, .bg-5, .bg-6 {
+  background-size: cover;
+}
+
+.bg-1 {
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.9) 40%, rgba(255,255,255,1) 100%), url(../assets/red-pokeball.png);
+}
+
+.bg-2 {
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.9) 40%, rgba(255,255,255,1) 100%), url(../assets/paint.png);
+  background-position: center;
+}
+
+.bg-3 {
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.9) 40%, rgba(255,255,255,1) 100%), url(../assets/torii.png);
+}
+
+.bg-4 {
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.9) 40%, rgba(255,255,255,1) 100%), url(../assets/chef.png);
+  background-position: center;
+}
+
+.bg-5 {
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.9) 40%, rgba(255,255,255,1) 100%), url(../assets/fork-knife.png);
+}
+
+.bg-6 {
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.9) 40%, rgba(255,255,255,1) 100%), url(../assets/tiger.png);
+}

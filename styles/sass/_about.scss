@@ -1,0 +1,178 @@
+.about-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-content {
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  img {
+    width: 30%;
+    // border-radius: 56% 44% 69% 31% / 58% 35% 65% 42%;
+    border: 10px solid $black;
+    filter: grayscale(100%);
+    transition: .8s;
+    background: $black;
+    animation: bubble 8s infinite;
+  }
+  &:hover img,
+  &:focus img {
+    transform: scale(.8);
+    filter: grayscale(70%);
+  }
+  &:hover h2::before,
+  &:focus h2::before {
+    width: 40px;
+  }
+  &:hover span,
+  &:focus span {
+    opacity: 1;
+  }
+  &:hover a,
+  &:hover a {
+    color: $red;
+  }
+}
+
+@keyframes bubble {
+  0% {
+    border-radius: 56% 44% 69% 31% / 58% 35% 65% 42%;
+  }
+  33%{
+    border-radius: 33% 67% 37% 63% / 54% 58% 42% 45% ;
+  }
+  66% {
+    border-radius: 74% 67% 57% 74% / 89% 92% 42% 45%;
+  }
+  100% {
+    border-radius: 56% 44% 69% 31% / 58% 35% 65% 42%;
+  }
+}
+
+.about-text {
+  width: 40%;
+  h2 {
+    width: 145px;
+    position: relative;
+  }
+  h2::before {
+    content: '';
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: $red;
+    transition: .5s;
+  }
+  span {
+    opacity: 0;
+    transition: .5s;
+  }
+  p {
+    padding: 5px 0;
+    position: relative;
+    &:hover .fa-hand-spock,
+    &:focus .fa-hand-spock {
+      opacity: 1;
+      animation: wave 2s infinite;
+    }
+    &:hover .fa-snowflake,
+    &:focus .fa-snowflake {
+      opacity: 1;
+      animation: spin 2s infinite;
+    }
+    &:hover .fa-dot-circle,
+    &:focus .fa-dot-circle {
+      opacity: 1;
+    }
+    &:hover .fa-address-card,
+    &:focus .fa-address-card {
+      opacity: 1;
+      animation: swipe 2s infinite;
+    }
+  }
+  i {
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    transform: translateY(-50%);
+    color: $red;
+    opacity: 0;
+    transition: .5s;
+  }
+}
+
+.bite::before {
+  content: '';
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  left: -20px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: $white;
+  z-index: 5;
+  transition: none;
+  opacity: 0;
+}
+
+.bite:hover::before {
+  animation: chew 2s infinite;
+}
+
+
+
+@keyframes wave {
+  0%, 60%, 100% {
+    transform: translateY(-50%) rotate(0deg);
+  } 
+  10%, 30% {
+    transform: translateY(-50%) rotate(16deg);
+  }  /* The following five values can be played with to make the waving more or less extreme */
+  20% { 
+    transform: translateY(-50%) rotate(-12deg);
+  }
+  40% {
+    transform: translateY(-50%) rotate(-6deg);
+  }
+  50% {
+    transform: translateY(-50%) rotate(14deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+@keyframes chew {
+  0% {
+    opacity: 0;
+  }
+
+  25%, 75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes swipe {
+  0% {
+    transform: translateY(-50%) translateX(-10px);
+  }
+  100% {
+    transform: translateY(-50%) translateX(0);
+  }
+}
