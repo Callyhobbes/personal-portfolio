@@ -40,11 +40,25 @@
     text-align: center;
     padding: 20px;
     font-size: 6rem;
+    &:hover p {
+      opacity: 1;
+      top: 0;
+    }
+    i {
+      transition: .5s;
+    }
+    &:hover i {
+      color: $red;
+    }
   }
   p {
     font-size: 2rem;
     text-transform: uppercase;
     padding-top: 10px;
+    position: relative;
+    transition: .5s;
+    top: 10px;
+    opacity: 0;
   }
   .change-s {
     color: $black;

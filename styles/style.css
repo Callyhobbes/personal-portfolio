@@ -937,10 +937,29 @@ h2 span {
   font-size: 6rem;
 }
 
+.languages li:hover p {
+  opacity: 1;
+  top: 0;
+}
+
+.languages li i {
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.languages li:hover i {
+  color: #e24727;
+}
+
 .languages p {
   font-size: 2rem;
   text-transform: uppercase;
   padding-top: 10px;
+  position: relative;
+  -webkit-transition: .5s;
+  transition: .5s;
+  top: 10px;
+  opacity: 0;
 }
 
 .languages .change-s {
