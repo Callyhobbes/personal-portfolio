@@ -92,6 +92,12 @@
   }
 }
 
+@media (max-width: 650px) {
+  .examples h2 {
+    left: 30px;
+  }
+}
+
 @media (max-width: 500px) {
   // Adjust Header font sizes for small viewports
   h1 {

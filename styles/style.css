@@ -1658,6 +1658,12 @@ button:hover {
   }
 }
 
+@media (max-width: 650px) {
+  .examples h2 {
+    left: 30px;
+  }
+}
+
 @media (max-width: 500px) {
   h1 {
     font-size: 3.6rem;
