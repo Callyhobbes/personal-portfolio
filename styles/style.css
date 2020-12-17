@@ -990,7 +990,6 @@ h2 span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 900px;
 }
 
 .examples:hover .change-s {
@@ -1298,7 +1297,6 @@ h2 span {
       -ms-flex-direction: column;
           flex-direction: column;
   font-family: sans-serif;
-  min-height: 650px;
 }
 
 .contact h2 {
@@ -1561,6 +1559,13 @@ button:hover {
 }
 
 @media (max-width: 1200px) {
+  .projects {
+    height: initial;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    min-height: 800px;
+  }
   .portfolio {
     width: 90%;
   }
@@ -1576,11 +1581,21 @@ button:hover {
   }
 }
 
+@media (max-width: 1000px) {
+  .about-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
 @media (max-width: 850px) {
   .contact {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    height: initial;
   }
   form {
     min-width: 300px;
@@ -1588,9 +1603,10 @@ button:hover {
   }
   .media {
     position: initial;
+    padding: 60px 0;
   }
   .media a {
-    padding: 20px;
+    padding: 0 20px;
   }
 }
 
@@ -1607,11 +1623,15 @@ button:hover {
 }
 
 @media (max-width: 500px) {
+  html {
+    -ms-scroll-snap-type: none;
+        scroll-snap-type: none;
+  }
   .projects {
-    min-height: 1600px;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    padding-bottom: 30px;
   }
   .portfolio {
     width: 90%;
@@ -1622,8 +1642,5 @@ button:hover {
     -ms-grid-rows: (1fr)[6];
         grid-template-rows: repeat(6, 1fr);
     justify-items: center;
-  }
-  .examples {
-    padding-bottom: 30px;
   }
 }
