@@ -79,14 +79,6 @@
     }
   }
 
-  // Portfolio Stack to two column
-  // .portfolio {
-  //   ul {
-  //     grid-template-columns: 1fr 1fr; 
-  //     grid-template-rows: 1fr 1fr 1fr;
-  //     justify-items: center;
-  //   }
-  // }
   .portfolio {
     li {
       width: calc((100% - 20px) / 2);
@@ -134,14 +126,6 @@
   .projects {
     height: initial;
   }
-  // .portfolio {
-  //   ul {
-  //     grid-template-columns: 1fr; 
-  //     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-  //     grid-gap: 20px;
-  //     justify-items: center;
-  //   }
-  // }
 
   .portfolio {
     li {

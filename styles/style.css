@@ -1466,6 +1466,11 @@ textarea {
   padding-top: 40px;
 }
 
+button, [type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
 button {
   font-size: 2rem;
   font-weight: 400;
@@ -1479,7 +1484,6 @@ button {
   overflow: hidden;
   font-family: 'Hind Siliguri', sans-serif;
   cursor: pointer;
-  -webkit-appearance: none;
 }
 
 button:hover > .paint:nth-child(1) {
