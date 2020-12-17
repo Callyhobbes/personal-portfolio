@@ -1,5 +1,4 @@
 // Media Query Styles
-
 @media (max-height: 700px) {
   html {
     scroll-snap-type: none;
@@ -32,6 +31,7 @@
 }
 
 @media (max-width: 850px) {
+  // resizing the form
   form {
     width: 70%;
     min-width: 0;
@@ -134,69 +134,3 @@
     }
   }
 }
-
-
-//   .portfolio {
-//     width: 90%;
-//     ul {
-//     grid-template-columns: repeat(2, 1fr); 
-//     grid-template-rows: repeat(3, 1fr);
-//     justify-items: center;
-//     }
-//     li {
-//       max-width: 200px;
-//     }
-//   }
-// }
-
-// @media (max-width: 850px) {
-//   .contact {
-//     justify-content: flex-start;
-//     height: initial;
-//   }
-  
-//   form {
-//     min-width: 300px;
-//     width: 60%;
-//   }
-
-//   .media {
-//     position: initial;
-//     padding: 60px 0;
-//     a {
-//       padding: 0 20px;
-//     }
-//   }
-
-
-// @media (max-width: 700px) {
-//   .section-guide {
-//     visibility: hidden;
-//   }
-
-//   .languages {
-//     width: 90%;
-//     li{
-//       width: calc(100% / 2);
-//     }
-//   }
-// }
-
-// @media (max-width: 500px) {
-//   html {
-//     scroll-snap-type: none;
-//   }
-//   .projects {
-//     align-items: flex-start;
-//     padding-bottom: 30px;
-//   }
-
-//   .portfolio {
-//     width: 90%;
-//     ul {
-//     grid-template-columns: repeat(1, 1fr); 
-//     grid-template-rows: repeat(6, 1fr);
-//     justify-items: center;
-//     }
-//   }
-// }
