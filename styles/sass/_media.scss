@@ -1,39 +1,40 @@
 // Media Query Styles
-@media (max-width: 1200px) {
-  .projects {
-    height: initial;
-    align-items: flex-start;
-    min-height: 800px;
+
+@media (max-height: 700px) {
+  html {
+    scroll-snap-type: none;
   }
   
-  .portfolio {
-    width: 90%;
-    ul {
-    grid-template-columns: repeat(2, 1fr); 
-    grid-template-rows: repeat(3, 1fr);
-    justify-items: center;
-    }
-    li {
-      max-width: 200px;
-    }
+  section {
+    height: initial;
+    padding: 20px 0;
+  }
+
+  // Remove the media absolute to stop overflow
+  .media {
+    position: relative;
+    padding-top: 30px;
   }
 }
 
-@media (max-width: 1000px) {
-  .about-content {
-    flex-direction: column-reverse;
+@media (max-width: 1200px) {
+  // add more space for projects and pop-up text adjustment
+  .projects {
+    width: 100%;
+    ul {
+      width: 100%;
+    }
+  }
+
+  h4 {
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 850px) {
-  .contact {
-    justify-content: flex-start;
-    height: initial;
-  }
-  
   form {
-    min-width: 300px;
-    width: 60%;
+    width: 70%;
+    min-width: 0;
   }
 
   .media {
@@ -46,33 +47,156 @@
 }
 
 @media (max-width: 700px) {
+  // Remove section guide and side nav
   .section-guide {
     visibility: hidden;
+
   }
 
+  .navbar {
+    visibility: hidden;
+
+  }
+
+  // Stack About Section
+  .about-content {
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column-reverse;
+    img {
+      width: 60%;
+      margin-top: 15px;
+    }
+  }
+
+  .about-text {
+    width: 80%;;
+  }
+
+  // Stack language in two columns
   .languages {
     width: 90%;
     li{
       width: calc(100% / 2);
     }
   }
-}
 
-@media (max-width: 500px) {
-  html {
-    scroll-snap-type: none;
-  }
-  .projects {
-    align-items: flex-start;
-    padding-bottom: 30px;
-  }
-
+  // Portfolio Stack to two column
   .portfolio {
-    width: 90%;
     ul {
-    grid-template-columns: repeat(1, 1fr); 
-    grid-template-rows: repeat(6, 1fr);
-    justify-items: center;
+      grid-template-columns: repeat(2, 1fr); 
+      grid-template-rows: repeat(3, 1fr);
+      justify-items: center;
     }
   }
 }
+
+@media (max-width: 500px) {
+  // Adjust Header font sizes for small viewports
+  h1 {
+    font-size: 3.6rem;
+  }
+
+  .typing h2 {
+    font-size: 2rem;
+  }
+
+  .type-text::after {
+    height: 23px;
+  }
+
+  .intro-content p {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .about-text p {
+    padding: 10px 0;
+  }
+
+  // Adjust form for small viewport
+  form {
+    width: 85%;
+  }
+
+}
+
+@media (max-width: 500px) and (max-height: 900px) {
+  .projects {
+    height: initial;
+  }
+  .portfolio {
+    ul {
+      grid-template-columns: repeat(1, 1fr); 
+      grid-template-rows: repeat(6, 1fr);
+      grid-gap: 20px;
+      justify-items: center;
+    }
+  }
+}
+
+
+//   .portfolio {
+//     width: 90%;
+//     ul {
+//     grid-template-columns: repeat(2, 1fr); 
+//     grid-template-rows: repeat(3, 1fr);
+//     justify-items: center;
+//     }
+//     li {
+//       max-width: 200px;
+//     }
+//   }
+// }
+
+// @media (max-width: 850px) {
+//   .contact {
+//     justify-content: flex-start;
+//     height: initial;
+//   }
+  
+//   form {
+//     min-width: 300px;
+//     width: 60%;
+//   }
+
+//   .media {
+//     position: initial;
+//     padding: 60px 0;
+//     a {
+//       padding: 0 20px;
+//     }
+//   }
+
+
+// @media (max-width: 700px) {
+//   .section-guide {
+//     visibility: hidden;
+//   }
+
+//   .languages {
+//     width: 90%;
+//     li{
+//       width: calc(100% / 2);
+//     }
+//   }
+// }
+
+// @media (max-width: 500px) {
+//   html {
+//     scroll-snap-type: none;
+//   }
+//   .projects {
+//     align-items: flex-start;
+//     padding-bottom: 30px;
+//   }
+
+//   .portfolio {
+//     width: 90%;
+//     ul {
+//     grid-template-columns: repeat(1, 1fr); 
+//     grid-template-rows: repeat(6, 1fr);
+//     justify-items: center;
+//     }
+//   }
+// }

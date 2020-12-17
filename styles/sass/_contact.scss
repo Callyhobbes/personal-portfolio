@@ -153,6 +153,8 @@ button {
   overflow: hidden;
   font-family: 'Hind Siliguri', sans-serif;
   cursor: pointer;
+  // Does this remove the weird button issue?
+  -webkit-appearance: none;
   &:hover > .paint:nth-child(1) {
     transform: translate(-35px, -20px) rotate(-20deg) scale(1,1);
   }

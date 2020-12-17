@@ -1158,7 +1158,7 @@ h2 span {
   width: 30%;
   height: 30%;
   min-height: 300px;
-  min-width: 300px;
+  min-width: 310px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1468,6 +1468,7 @@ button {
   overflow: hidden;
   font-family: 'Hind Siliguri', sans-serif;
   cursor: pointer;
+  -webkit-appearance: none;
 }
 
 button:hover > .paint:nth-child(1) {
@@ -1558,48 +1559,37 @@ button:hover {
   width: 40%;
 }
 
-@media (max-width: 1200px) {
-  .projects {
+@media (max-height: 700px) {
+  html {
+    -ms-scroll-snap-type: none;
+        scroll-snap-type: none;
+  }
+  section {
     height: initial;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    min-height: 800px;
+    padding: 20px 0;
   }
-  .portfolio {
-    width: 90%;
-  }
-  .portfolio ul {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-    -ms-grid-rows: (1fr)[3];
-        grid-template-rows: repeat(3, 1fr);
-    justify-items: center;
-  }
-  .portfolio li {
-    max-width: 200px;
+  .media {
+    position: relative;
+    padding-top: 30px;
   }
 }
 
-@media (max-width: 1000px) {
-  .about-content {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+@media (max-width: 1200px) {
+  .projects {
+    width: 100%;
+  }
+  .projects ul {
+    width: 100%;
+  }
+  h4 {
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 850px) {
-  .contact {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    height: initial;
-  }
   form {
-    min-width: 300px;
-    width: 60%;
+    width: 70%;
+    min-width: 0;
   }
   .media {
     position: initial;
@@ -1614,33 +1604,75 @@ button:hover {
   .section-guide {
     visibility: hidden;
   }
+  .navbar {
+    visibility: hidden;
+  }
+  .about-content {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .about-content img {
+    width: 60%;
+    margin-top: 15px;
+  }
+  .about-text {
+    width: 80%;
+  }
   .languages {
     width: 90%;
   }
   .languages li {
     width: calc(100% / 2);
   }
+  .portfolio ul {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+  }
 }
 
 @media (max-width: 500px) {
-  html {
-    -ms-scroll-snap-type: none;
-        scroll-snap-type: none;
+  h1 {
+    font-size: 3.6rem;
   }
+  .typing h2 {
+    font-size: 2rem;
+  }
+  .type-text::after {
+    height: 23px;
+  }
+  .intro-content p {
+    width: 100%;
+    min-width: 0;
+  }
+  .about-text p {
+    padding: 10px 0;
+  }
+  form {
+    width: 85%;
+  }
+}
+
+@media (max-width: 500px) and (max-height: 900px) {
   .projects {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    padding-bottom: 30px;
-  }
-  .portfolio {
-    width: 90%;
+    height: initial;
   }
   .portfolio ul {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
     -ms-grid-rows: (1fr)[6];
         grid-template-rows: repeat(6, 1fr);
+    grid-gap: 20px;
     justify-items: center;
   }
 }
