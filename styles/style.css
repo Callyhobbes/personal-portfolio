@@ -1040,10 +1040,10 @@ h2 span {
   display: -ms-grid;
   display: grid;
   grid-gap: 30px;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2, 1fr);
+  -ms-grid-columns: 3, 1fr;
+      grid-template-columns: 3, 1fr;
+  -ms-grid-rows: 2, 1fr;
+      grid-template-rows: 2, 1fr;
   margin: 0 auto;
 }
 
@@ -1633,10 +1633,10 @@ button:hover {
     width: calc(100% / 2);
   }
   .portfolio ul {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-    -ms-grid-rows: (1fr)[3];
-        grid-template-rows: repeat(3, 1fr);
+    -ms-grid-columns: 2, 1fr;
+        grid-template-columns: 2, 1fr;
+    -ms-grid-rows: 3, 1fr;
+        grid-template-rows: 3, 1fr;
     justify-items: center;
   }
 }
@@ -1668,10 +1668,10 @@ button:hover {
     height: initial;
   }
   .portfolio ul {
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
-    -ms-grid-rows: (1fr)[6];
-        grid-template-rows: repeat(6, 1fr);
+    -ms-grid-columns: 1, 1fr;
+        grid-template-columns: 1, 1fr;
+    -ms-grid-rows: 6, 1fr;
+        grid-template-rows: 6, 1fr;
     grid-gap: 20px;
     justify-items: center;
   }
