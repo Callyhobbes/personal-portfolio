@@ -1,0 +1,66 @@
+// Media Query Styles
+@media (max-width: 1200px) {
+  .portfolio {
+    width: 90%;
+    ul {
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    }
+    li {
+      max-width: 200px;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .contact {
+    justify-content: flex-start;
+  }
+  
+  form {
+    min-width: 300px;
+    width: 60%;
+  }
+
+  .media {
+    position: initial;
+    a {
+      padding: 20px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .section-guide {
+    visibility: hidden;
+  }
+
+  .languages {
+    width: 90%;
+    li{
+      width: calc(100% / 2);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+
+  .projects {
+    min-height: 1600px;
+    align-items: flex-start;
+  }
+
+  .portfolio {
+    width: 90%;
+    ul {
+    grid-template-columns: repeat(1, 1fr); 
+    grid-template-rows: repeat(6, 1fr);
+    justify-items: center;
+    }
+  }
+
+  .examples {
+    padding-bottom: 30px;
+  }
+}

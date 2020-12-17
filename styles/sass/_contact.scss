@@ -4,6 +4,7 @@
   align-items: center;
   flex-direction: column;
   font-family: sans-serif;
+  min-height: 650px;
   h2 {
     width: 100%;
     color: $black;
@@ -30,6 +31,7 @@
 }
 
 form {
+  min-width: 700px;
   width: 40%;
   padding: 20px;
   &:hover .change {
