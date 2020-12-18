@@ -64,7 +64,7 @@ app.flowText = function() {
 app.typeEffect = function() {
   const typedTextSpan = document.querySelector('.type-text');
   
-  const textArray = ['Front-End Developer', 'UI Designer', 'Donut Connoisseur'];
+  const textArray = ['Front-End Developer', 'UI Enthusiast', 'Donut Connoisseur'];
   const typingDelay = 200;
   const erasingDelay = 100;
   const newTextDelay = 2000;
