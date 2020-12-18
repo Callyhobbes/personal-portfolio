@@ -1,6 +1,7 @@
+const app = {};
 
 // H1 effect on hover
-function flowText() {
+app.flowText = function() {
   const text = document.querySelector('.title-name');
   const stringText = text.textContent;
 
@@ -57,10 +58,10 @@ function flowText() {
       timer = null;
     }
   };
-}
+};
 
 // Type Effect
-function typeEffect() {
+app.typeEffect = function() {
   const typedTextSpan = document.querySelector('.type-text');
   
   const textArray = ['Front-End Developer', 'UI Designer', 'Donut Connoisseur'];
@@ -98,7 +99,7 @@ function typeEffect() {
 };
 
 // Pop-up for each Project Effect
-function modalPopUp() {
+app.modalPopUp = function() {
   let infoToggle = document.getElementsByClassName('info-toggle');
   let close = document.getElementsByClassName('close');
 
@@ -120,7 +121,7 @@ function modalPopUp() {
 };
 
 // Active page on anchor click
-function activeLink() {
+app.activeLink = function() {
   const list = document.querySelectorAll('.navbar li');
 
   // loop through to access each node
@@ -134,7 +135,7 @@ function activeLink() {
 };
 
 // Active page on scroll
-function activeScroll() {
+app.activeScroll = function() {
   // Create an event listener to the scroll to hightlight active
   window.addEventListener('scroll', function () {
     let home = document.getElementById('home').offsetTop;
@@ -168,7 +169,7 @@ function activeScroll() {
 };
 
 // Create a mobile nav view
-function mobileNav() {
+app.mobileNav = function() {
   const hamburger = document.querySelector('.mobile');
   const nav = document.querySelector('nav');
   const desktopNav = document.querySelector('.desktop-nav');
@@ -198,15 +199,15 @@ function mobileNav() {
   });
 };
 
-flowText();
-typeEffect();
-modalPopUp();
-activeLink();
-activeScroll();
-mobileNav();
+app.init = function() {
+  app.flowText();
+  app.typeEffect();
+  app.modalPopUp();
+  app.activeLink();
+  app.activeScroll();
+  app.mobileNav();
+}
 
-
-
-
-
-
+document.addEventListener('DOMContentLoaded', function() {
+  app.init();
+})
