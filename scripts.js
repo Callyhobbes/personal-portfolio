@@ -167,8 +167,46 @@ function activeScroll() {
   });
 };
 
+// Create a mobile nav view
+function mobileNav() {
+  const hamburger = document.querySelector('.mobile');
+  const nav = document.querySelector('nav');
+  const desktopNav = document.querySelector('.desktop-nav');
+  const topLine = document.querySelector('.mobile-bars span:nth-of-type(1)');
+  const middleLine = document.querySelector('.mobile-bars span:nth-of-type(2)');
+  const bottomLine = document.querySelector('.mobile-bars span:nth-of-type(3)');
+  const list = document.querySelectorAll('.navbar li');
+
+  // toggle the nav class and transform the hamburger
+  hamburger.addEventListener('click', function () {
+    nav.classList.toggle('visible');
+    desktopNav.classList.toggle('open');
+    topLine.classList.toggle('line1');
+    middleLine.classList.toggle('line2');
+    bottomLine.classList.toggle('line3');
+
+    // remove all classes if a list item anchor is clicked
+    list.forEach(items => {
+      items.addEventListener('click', function () {
+        nav.classList.remove('visible');
+        desktopNav.classList.remove('open');
+        topLine.classList.remove('line1');
+        middleLine.classList.remove('line2');
+        bottomLine.classList.remove('line3');
+      });
+    });
+  });
+};
+
 flowText();
 typeEffect();
 modalPopUp();
 activeLink();
 activeScroll();
+mobileNav();
+
+
+
+
+
+

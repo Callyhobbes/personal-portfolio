@@ -15,42 +15,21 @@ nav {
   top: 10px;
   padding: 5px 10px;
 }
+
 .mobile-bars {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 2px;
-    background-color: $black;
-  }
-  span:nth-of-type(2) {
-    width: 20px;
-  }
-  span:nth-of-type(3) {
-    width: 15px;
-  }
-}
-
-.mobile-checkbox {
-  z-index: 150;
-  height: 40px;
-  width: 50px;
-  position: fixed;
-  right: 5px;
-  top: 5px;
-  opacity: 0;
   cursor: pointer;
-  &:hover ~ .mobile-bars span:nth-of-type(2) {
-    width: 25px;
-  }
-  &:hover ~ .mobile-bars span:nth-of-type(3) {
-    width: 25px;
-  }
 }
 
+.hamburger {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 2px;
+  background-color: $black;
+}
 
 .navbar {
   ul {
