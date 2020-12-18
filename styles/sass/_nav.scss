@@ -1,3 +1,4 @@
+// Navigation Styles
 nav {
   position: fixed;
   z-index: 10;
@@ -7,6 +8,7 @@ nav {
   margin-right: 25px;
 }
 
+// Mobile Section (max width: 700px)
 .mobile {
   visibility: hidden;
   z-index: 100;
@@ -31,6 +33,7 @@ nav {
   background-color: $black;
 }
 
+// Right Side Nav Bar
 .navbar {
   ul {
     display: flex;
@@ -77,7 +80,3 @@ nav {
     width: 30px;
   }
 }
-
-
-
-

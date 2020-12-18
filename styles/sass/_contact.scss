@@ -1,3 +1,4 @@
+// Contact Section Styling
 .contact {
   display: flex;
   justify-content: center;
@@ -29,6 +30,7 @@
   }
 }
 
+// Form Styling
 form {
   min-width: 700px;
   width: 40%;
@@ -141,6 +143,7 @@ textarea {
   padding-top: 40px;
 }
 
+// remove button default styling
 button, [type="submit"] {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -205,6 +208,7 @@ button {
   transition: .5s;
 }
 
+// Media links at bottom
 .media {
   position: absolute;
   bottom: 20px;

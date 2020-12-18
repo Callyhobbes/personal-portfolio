@@ -1,3 +1,4 @@
+// Project Section Styling
 .projects {
   display: flex;
   justify-content: center;
@@ -36,6 +37,7 @@
   }
 }
 
+// Portfolio list items
 .portfolio {
   width: 80%;
   margin: 0 auto;
@@ -72,6 +74,7 @@
   }
 }
 
+// Double animation on hover
 @keyframes bubble1 {
   0% {
     border-radius: 20px;
@@ -189,6 +192,7 @@
   }
 }
 
+// Modal backgrounds with project favicons
 .bg-1, .bg-2, .bg-3, .bg-4, .bg-5, .bg-6 {
   background-size: cover;
 }

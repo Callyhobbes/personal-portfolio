@@ -1,3 +1,4 @@
+// Global Styling
 * {
   margin: 0;
   padding: 0;
@@ -30,6 +31,7 @@ section {
   margin: 0 auto;
 }
 
+// left side section update
 .section-guide {
   position: absolute;
   transform-origin: center;
@@ -119,7 +121,6 @@ ul {
 a {
   color: $black;
   text-decoration: none;
-  // transition: .5s;
 }
 
 em {
@@ -131,11 +132,13 @@ span {
   transition: .5s;
 }
 
+// H2 slide in text
 .change {
   color: $red;
   opacity: 0;
 }
 
+// span to adjust h2 s's
 .change-s {
   color: $black;
 }

@@ -1,3 +1,4 @@
+// About Section Styling
 .about-me {
   display: flex;
   justify-content: center;
@@ -36,6 +37,7 @@
   }
 }
 
+// Image Bubble Style
 @keyframes bubble {
   0% {
     border-radius: 56% 44% 69% 31% / 58% 35% 65% 42%;
@@ -126,7 +128,7 @@
 }
 
 
-
+// Hover over animation on paragraph content
 @keyframes wave {
   0%, 60%, 100% {
     transform: translateY(-50%) rotate(0deg);
