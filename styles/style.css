@@ -244,8 +244,6 @@ html {
   font-size: 62.5%;
   font-family: 'Hind Siliguri', sans-serif;
   scroll-behavior: smooth;
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
 }
 
 body {
@@ -259,7 +257,6 @@ section {
   height: 100vh;
   width: 100%;
   position: relative;
-  scroll-snap-align: start;
 }
 
 .wrapper {
