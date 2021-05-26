@@ -1771,6 +1771,10 @@ button:hover {
   }
   .languages li {
     width: calc(100% / 2);
+    font-size: 5rem;
+  }
+  .languages p {
+    display: none;
   }
   .portfolio li {
     width: calc((100% - 20px) / 2);
