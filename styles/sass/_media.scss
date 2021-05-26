@@ -136,6 +136,10 @@
     width: 90%;
     li {
       width: calc(100% / 2);
+      font-size: 5rem;
+    }
+    p {
+      display: none;
     }
   }
 
